@@ -5,7 +5,15 @@ class Accounts extends Component {
   state = {};
   static contextType = Context;
   render() {
-    return <h1>Account {this.context.userName}</h1>;
+    const { userName, changeUserName } = this.context;
+    return (
+      <div>
+        <h1>Account {userName}</h1>
+        <button type="button" onClick={changeUserName}>
+          Change User Name
+        </button>
+      </div>
+    );
   }
 }
 

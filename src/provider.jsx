@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import Context from "./contexts";
 
 export class Provider extends Component {
-  changeUserName = () => {};
+  changeUserName = () => {
+    this.setState(prevState => ({
+      userName: `${prevState.userName}!`
+    }));
+  };
 
   state = {
     userName: "default",
